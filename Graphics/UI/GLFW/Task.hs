@@ -73,9 +73,9 @@ isChar :: Char -> Char -> Maybe ()
 isChar ch c | ch == c   = Just ()
             | otherwise = Nothing
 
-isButton :: MouseButton -> (MouseButton, KeyButtonState) -> Maybe KeyButtonState
-isButton but (b, s) | b == but  = Just s
-                    | otherwise = Nothing
+isButton :: MouseButton -> MouseButton -> Maybe ()
+isButton but b | b == but  = Just ()
+               | otherwise = Nothing
 
 isPress, isRelease :: (a, KeyButtonState) -> Maybe a
 isPress   (b, s) | s == Press   = Just b 
