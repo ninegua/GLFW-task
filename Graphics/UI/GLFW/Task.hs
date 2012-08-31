@@ -1,10 +1,9 @@
-{- | GLFW helper functions for use with a @`TaskT`@ monad transformer (from monad-task package).
+{- | GLFW helper functions for use with a 'Control.Monad.Task.TaskT' monad transformer (from monad-task package).
 -}
 {-# LANGUAGE FlexibleContexts, TupleSections #-}
 module Graphics.UI.GLFW.Task 
   (
     Event(..)
-  , or
   , onKey
   , onChar
   , onButton
